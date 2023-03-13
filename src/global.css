@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ccc;
+}
+
+.mainNav{
+    padding: 0 30px;
+    height: 75px;
+    background-color: royalblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainNav ul{
+    display: flex;
+    list-style: none;
+}
+
+.mainNav ul li{
+    margin: 0 20px;
+}
+
+.mainNav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
