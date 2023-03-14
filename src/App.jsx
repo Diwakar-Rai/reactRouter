@@ -1,25 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
-import Home from './pages/Home';
-import PageNotFound from './pages/PageNotFound';
-import DashBoard from './components/users/DashBoard';
-import Users from './components/users/Users';
-
+import TyssRoute from './Routes/TyssRoute';
 const App = () => {
   return (
-    <div>
+    <section className="mainBlock">
       <Router>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<DashBoard />}>
-            <Route path="users" element={<Users />}/>
-          </Route>
-          <Route path="*" element={<PageNotFound/>}/>
-        </Routes>
+        <TyssRoute />
       </Router>
-    </div>
+    </section>
   );
 };
 
