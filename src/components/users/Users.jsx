@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const Users = () => {
-    let {name} = useParams()
-    let [users, setUsers] = useState([]);
-    
-    useEffect(() => {
-        let fetchUsers = async () => {
-            let data = await window.fetch(`https://api.github.com/users/${name}`);
-            let userData = await data.json();
-            setUsers(userData);
-        }
+  let { name } = useParams();
+  let [users, setUsers] = useState([]);
 
-        fetchUsers();
-    }, []);
+  useEffect(() => {
+    let fetchUsers = async () => {
+      let data = await window.fetch(`https://api.github.com/users/${name}`);
+      let userData = await data.json();
+      setUsers(userData);
+    };
+
+    fetchUsers();
+  }, []);
   return (
     //   <div className='ListUser'>{
     //       users.length > 0 ? (users?.map((user, index) => {
@@ -26,12 +26,10 @@ const Users = () => {
     //           )
     //       })):"loading..."
     // }
-      
-    // </div>
-      <div>
-          {users.login}
-      </div>
-  )
-}
 
-export default Users
+    // </div>
+    <div>{users.login}</div>
+  );
+};
+
+export default Users;

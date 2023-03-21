@@ -1,21 +1,36 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/navbar/Navbar";
-import Users from "./components/users/Users";
-import Home from "./pages/Home";
-import PageNotFound from "./pages/PageNotFound";
+import React,{useRef} from "react";
+// import  Form from "./components/reducer/Form";
+// import ComponentDidMount from './components/effect/ComponentDidMount'
+// import UseEffect from './components/effect/UseEffect'
+// import UseEffectExample from "./components/effect/UseEffectExample";
+// import SpeechRecognition from "./components/effect/SpeechRecognition";
+import Modal from './components/Modal/Modal';
+import ReducerComponent from "./components/reducer/ReducerComponent";
+
 const App = () => {
+
+//! For modal using portals
+// let [show, setShow] = useState(false)
+//   let open = () => {
+//   setShow(!show)
+//   }
+ 
+  
   return (
-    <section className="mainBlock">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/:name" element={<Users />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-      </Router>
-    </section>
+    <div>
+      {/* <UseEffect/>
+      <ComponentDidMount /> */}
+      {/* <UseEffectExample /> */}
+      {/* <SpeechRecognition /> */}
+
+      {/* The following is for portals */}
+      {/* {show === true ? <Modal /> : ""}
+      <button id="button" onClick={open}>Show</button> */}
+
+      {/* For useReducer */}
+      <ReducerComponent />
+      <Modal/>
+    </div>
   );
 };
 
